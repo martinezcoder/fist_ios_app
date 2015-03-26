@@ -6,17 +6,24 @@
 //  Copyright (c) 2015 Martinecoder. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MainViewController.h"
 
-@interface ViewController ()
+@interface MainViewController ()
+
+@property (strong, nonatomic) IBOutlet UILabel *helloLabel;
 
 @end
 
-@implementation ViewController
+@implementation MainViewController
+
+- (IBAction)buttonPressed:(UIButton *)sender {
+    [self.helloLabel setHidden:NO];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [self.helloLabel setHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning {
